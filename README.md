@@ -64,10 +64,16 @@ Para o segundo objetivo perguntei a um amigo que gosta de futebol o que ele quer
 
 * A planilha foi divida no modelo DIM-FACT do Power Bi para facilitar carregar os dados, caso seja feita uma atualização.
 
+![](https://github.com/NandesLima/analise-campeonato-brasileiro/blob/master/modelagem-dados.png)
 
 
 ## Objetivos
 
 ### Dashboard de análises gerais
 
+![](https://github.com/NandesLima/analise-campeonato-brasileiro/blob/master/an%C3%A1lise-geral.png)
+
+
 ### Dashboard de análise dos times
+
+![](https://github.com/NandesLima/analise-campeonato-brasileiro/blob/master/an%C3%A1lise-times.png)

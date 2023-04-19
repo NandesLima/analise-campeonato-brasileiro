@@ -55,6 +55,7 @@ Para o segundo objetivo perguntei a um amigo que gosta de futebol o que ele quer
 
 * Utilizada planilha .CSV com os dados de todos os jogos de 2003 a 2021 do campeonato brasileiro série A.
 
+[Base de Dados - Campeonato-brasileiro-full.csv](https://github.com/NandesLima/analise-campeonato-brasileiro/blob/master/Base%20de%20Dados%20-%20Campeonato-brasileiro-full.csv)
 
 
 ## Modelagem

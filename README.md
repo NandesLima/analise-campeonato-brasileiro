@@ -1,79 +1,69 @@
-Análise - Campeonato Brasileiro Série A
-======================================
+# ⚽ Dashboard Esportivo: Campeonato Brasileiro (Série A)
 
-Projeto de modelagem de dados e visualization utilizando o Power BI, analisando partidas do campeonato brasileiro desde a mudaça de seu formato que foi em 2003 até 2021.
+<div align="center">
+  <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" />
+  <img src="https://img.shields.io/badge/Data_Visualization-00f2ff?style=for-the-badge&logo=googleanalytics&logoColor=black" />
+  <img src="https://img.shields.io/badge/Data_Modeling-7000ff?style=for-the-badge&logo=databricks&logoColor=white" />
+</div>
 
-Tem dois objetivos principais:
+<br>
 
-O primeiro proposto pelo consultor da [DNC](https://www.linkedin.com/school/escoladnc/),  [Eduardo Inocencio](https://www.linkedin.com/in/eduardoinocencio/), trata de responder questões de análise geral dos times que participaram do campeonato dentre os períodos de 2003 e 2021.
+> **Objetivo:** Desenvolvimento de Dashboards interativos e modelagem de dados no Power BI para analisar o desempenho de clubes, formações táticas e estatísticas gerais do Campeonato Brasileiro (Série A) no período de 2003 a 2021.
 
-* Quais os times e estados com maior números de gols?
+---
 
-* Qual o número de gols visitante e mandante ao decorrer dos meses e a média de gols?
+## 🎯 Visão Geral do Projeto
 
-* Uma tabela contendo todos os técnicos.
+Este projeto de Data Visualization foi dividido em duas frentes de negócio (análise esportiva):
 
-* Quais os 5 times mandantes com maior número de gols?
+1. **Visão Macro (Consultoria DNC):** Uma visão geral e geográfica dos maiores pontuadores do campeonato ao longo de quase duas décadas.
+2. **Visão Micro (Análise de Torcedor/Tática):** Um detalhamento granular do desempenho de times específicos, focando em eficiência de treinadores, sucesso de formações táticas (ex: 4-4-2 vs 4-3-3) e performance por estádio.
 
-* Quais os 5 times visitantes com maior número de gols?
+👉 **[Fazer o download do Dashboard (.pbix)](campeonato-brasileiro.pbix)**
 
-* Quais os 5 estados mandantes com maior número de gols?
+---
 
-* Quais os 5 estados visitantes com maior número de gols?
+## 🗂️ O Dataset e a Modelagem
 
+**Fonte de Dados:** Planilha `.CSV` contendo o histórico oficial de todas as partidas da Série A desde a transição para o formato de pontos corridos (2003) até 2021.
 
+**Arquitetura (Star Schema):**
+Para garantir o desempenho do dashboard e facilitar futuras atualizações de dados do Brasileirão, a tabela "flat" original passou por um processo de ETL (Extração, Transformação e Carga) no Power Query e foi modelada no padrão **Fato-Dimensão (Star Schema)**.
 
-Para o segundo objetivo perguntei a um amigo que gosta de futebol o que ele queria saber de informação, em resumo ele queria conseguir visualizar o desempenho do time que ele torce ao decorrer dos anos.
+![Modelagem de Dados](modelagem-dados.png)
 
-* Comparar os 3 melhores times do ano.
+---
 
-* Comparar os 4 piores times do ano.
+## 💡 Perguntas Analíticas Respondidas
 
-* Qual a formação mais utilizada do time selecionado?
+<details>
+<summary><b>📊 1. Visão Geral do Campeonato (Macro)</b></summary>
+<br>
 
-* Qual a formação que permitiu mais vitórias do time selecionado?
+* Quais os times e estados com maior número histórico de gols?
+* Qual a taxa de sucesso e número de gols separando Mandantes vs. Visitantes ao decorrer dos meses?
+* Quais os 5 times mandantes mais letais do Brasil? E os 5 visitantes?
+</details>
 
-* Em qual estádio o time teve mais vitórias?
+<details>
+<summary><b>📋 2. Análise Tática e Desempenho do Time (Micro)</b></summary>
+<br>
 
-* Qual o técnico que trouxe mais vitórias ao time?
+* **Análise Tática:** Qual a formação mais utilizada pelo clube selecionado? Qual formação obteve a maior taxa de conversão em vitórias?
+* **Análise de Liderança:** Qual técnico trouxe a maior média de pontos e vitórias para a equipe?
+* **Fator Casa:** Em qual estádio o time possui sua maior "fortaleza" (taxa de vitórias)?
+* **Comparativo de Tabela:** Como o time se saiu contra o "Top 3" (melhores do ano) e contra o "Bottom 4" (zona de rebaixamento)?
+</details>
 
-* Quantos gols foram feitos no total, em casa e como visitante?
+---
 
-* Quantas derrotas, vitórias e empates?
+## 📸 Telas do Dashboard
 
-* Qual a pontuação total do time?
+### 1. Dashboard de Análises Gerais (Visão do Campeonato)
+![Dashboard Geral](análise-geral.png)
 
+### 2. Dashboard de Análise Tática dos Times (Visão Específica)
+![Dashboard de Times](análise-times.png)
 
-
-## Requisitos
-
-* Power BI desktop
-
-
-
-## Dados
-
-* Utilizada planilha .CSV com os dados de todos os jogos de 2003 a 2021 do campeonato brasileiro série A.
-
-[Base de Dados - Campeonato-brasileiro-full.csv](https://github.com/NandesLima/analise-campeonato-brasileiro/blob/master/Base%20de%20Dados%20-%20Campeonato-brasileiro-full.csv)
-
-
-## Modelagem
-
-* Foram excluídos os dados que não seriam utilizados e feitas as tratativas necessárias.
-
-* A planilha foi divida no modelo DIM-FACT do Power Bi para facilitar carregar os dados, caso seja feita uma atualização.
-
-![](https://github.com/NandesLima/analise-campeonato-brasileiro/blob/master/modelagem-dados.png)
-
-
-## Objetivos
-
-### Dashboard de análises gerais
-
-![](https://github.com/NandesLima/analise-campeonato-brasileiro/blob/master/an%C3%A1lise-geral.png)
-
-
-### Dashboard de análise dos times
-
-![](https://github.com/NandesLima/analise-campeonato-brasileiro/blob/master/an%C3%A1lise-times.png)
+---
+*Este repositório faz parte do meu portfólio de Visualização de Dados e BI, demonstrando capacidade de ETL, modelagem Star Schema e criação de dashboards focados em UX/UI.*

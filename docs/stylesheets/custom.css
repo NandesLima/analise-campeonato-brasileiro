@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&display=swap');
+
+:root {
+    --md-code-font: "Fira Code";
+}
+
+[data-md-color-scheme="slate"] {
+    --md-primary-fg-color: #7000ff;
+    --md-accent-fg-color: #00f2ff;
+}
+
+/* Efeito Neon em Imagens e Admonitions */
+.md-content img {
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(112, 0, 255, 0.3);
+    transition: 0.3s;
+}
+
+.md-content img:hover {
+    box-shadow: 0 0 25px rgba(0, 242, 255, 0.5);
+}
+
+.admonition {
+    border-left: 4px solid var(--md-accent-fg-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}

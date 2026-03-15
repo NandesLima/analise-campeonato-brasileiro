@@ -8,6 +8,12 @@
 
 <br>
 
+<div align="center">
+  <h3>🌐 <a href="https://nandeslima.github.io/analise-campeonato-brasileiro/">Acesse a Versão Interativa (MkDocs)</a></h3>
+</div>
+
+<br>
+
 > **Objetivo:** Desenvolvimento de Dashboards interativos e modelagem de dados no Power BI para analisar o desempenho de clubes, formações táticas e estatísticas gerais do Campeonato Brasileiro (Série A) no período de 2003 a 2021.
 
 ---
@@ -30,7 +36,7 @@ Este projeto de Data Visualization foi dividido em duas frentes de negócio (an�
 **Arquitetura (Star Schema):**
 Para garantir o desempenho do dashboard e facilitar futuras atualizações de dados do Brasileirão, a tabela "flat" original passou por um processo de ETL (Extração, Transformação e Carga) no Power Query e foi modelada no padrão **Fato-Dimensão (Star Schema)**.
 
-![Modelagem de Dados](modelagem-dados.png)
+![Modelagem de Dados](docs/assets/modelagem-dados.png)
 
 ---
 
@@ -60,10 +66,10 @@ Para garantir o desempenho do dashboard e facilitar futuras atualizações de da
 ## 📸 Telas do Dashboard
 
 ### 1. Dashboard de Análises Gerais (Visão do Campeonato)
-![Dashboard Geral](análise-geral.png)
+![Dashboard Geral](docs/assets/analise-geral.png)
 
 ### 2. Dashboard de Análise Tática dos Times (Visão Específica)
-![Dashboard de Times](análise-times.png)
+![Dashboard de Times](docs/assets/analise-times.png)
 
 ---
-*Este repositório faz parte do meu portfólio de Visualização de Dados e BI, demonstrando capacidade de ETL, modelagem Star Schema e criação de dashboards focados em UX/UI.*
+*Este repositório faz parte do portfólio de Visualização de Dados de **Ariel Shlomoh**.*

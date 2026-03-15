@@ -23,10 +23,10 @@ Este projeto de Data Visualization foi dividido em duas frentes de negócio:
 ## 📸 Demonstração
 
 ### 1. Análises Gerais (Visão do Campeonato)
-![Dashboard Geral](assets/an%C3%A1lise-geral.png)
+![Dashboard Geral](assets/analise-geral.png)
 
 ### 2. Análise Tática dos Times
-![Dashboard de Times](assets/an%C3%A1lise-times.png)
+![Dashboard de Times](assets/analise-times.png)
 
 ---
 

@@ -1,75 +1,29 @@
 # ⚽ Dashboard Esportivo: Campeonato Brasileiro (Série A)
 
 <div align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" />
   <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" />
-  <img src="https://img.shields.io/badge/Data_Visualization-00f2ff?style=for-the-badge&logo=googleanalytics&logoColor=black" />
-  <img src="https://img.shields.io/badge/Data_Modeling-7000ff?style=for-the-badge&logo=databricks&logoColor=white" />
 </div>
 
 <br>
 
-<div align="center">
-  <h3>🌐 <a href="https://nandeslima.github.io/analise-campeonato-brasileiro/">Acesse a Versão Interativa (MkDocs)</a></h3>
-</div>
-
-<br>
-
-> **Objetivo:** Desenvolvimento de Dashboards interativos e modelagem de dados no Power BI para analisar o desempenho de clubes, formações táticas e estatísticas gerais do Campeonato Brasileiro (Série A) no período de 2003 a 2021.
+> ⚠️ **UPGRADE DE STACK (Refatoração):** Este projeto original em Power BI foi refatorado para demonstrar a transição de um workflow manual para um **Pipeline Híbrido de Dados**. O Power BI agora serve como camada de visualização histórica, enquanto toda a inteligência de tratamento e análise estatística foi migrada para **Python & Pandas**.
 
 ---
 
-## 🎯 Visão Geral do Projeto
-
-Este projeto de Data Visualization foi dividido em duas frentes de negócio (análise esportiva):
-
-1. **Visão Macro (Consultoria DNC):** Uma visão geral e geográfica dos maiores pontuadores do campeonato ao longo de quase duas décadas.
-2. **Visão Micro (Análise de Torcedor/Tática):** Um detalhamento granular do desempenho de times específicos, focando em eficiência de treinadores, sucesso de formações táticas (ex: 4-4-2 vs 4-3-3) e performance por estádio.
-
-👉 **[Fazer o download do Dashboard (.pbix)](campeonato-brasileiro.pbix)**
+## 🚀 Por que Refatorar?
+A decisão de refatorar este projeto legado visou:
+1.  **Versionamento de Código:** Migrar o ETL do Power Query para Python permite o controle de versão real via Git.
+2.  **Performance:** Processamento de dados programático é mais veloz e escalável.
+3.  **Profundidade Analítica:** Adição de EDA (Análise Exploratória de Dados) com visualizações estatísticas (Seaborn/Matplotlib) que superam as limitações de dashboards executivos.
 
 ---
 
-## 🗂️ O Dataset e a Modelagem
+## 📋 Arquitetura do Projeto
+- **Visualização Legada:** Dashboards interativos no Power BI (ver `docs/assets`).
+- **Engenharia de Dados:** Script [`data_cleaning.py`](data_cleaning.py) para limpeza e Feature Engineering.
+- **Ciência de Dados:** Script [`data_viz.py`](data_viz.py) para análises estatísticas e geração de gráficos de tendência.
+- **Documentação:** Site interativo gerado via **MkDocs**.
 
-**Fonte de Dados:** Planilha `.CSV` contendo o histórico oficial de todas as partidas da Série A desde a transição para o formato de pontos corridos (2003) até 2021.
-
-**Arquitetura (Star Schema):**
-Para garantir o desempenho do dashboard e facilitar futuras atualizações de dados do Brasileirão, a tabela "flat" original passou por um processo de ETL (Extração, Transformação e Carga) no Power Query e foi modelada no padrão **Fato-Dimensão (Star Schema)**.
-
-![Modelagem de Dados](docs/assets/modelagem-dados.png)
-
----
-
-## 💡 Perguntas Analíticas Respondidas
-
-<details>
-<summary><b>📊 1. Visão Geral do Campeonato (Macro)</b></summary>
-<br>
-
-* Quais os times e estados com maior número histórico de gols?
-* Qual a taxa de sucesso e número de gols separando Mandantes vs. Visitantes ao decorrer dos meses?
-* Quais os 5 times mandantes mais letais do Brasil? E os 5 visitantes?
-</details>
-
-<details>
-<summary><b>📋 2. Análise Tática e Desempenho do Time (Micro)</b></summary>
-<br>
-
-* **Análise Tática:** Qual a formação mais utilizada pelo clube selecionado? Qual formação obteve a maior taxa de conversão em vitórias?
-* **Análise de Liderança:** Qual técnico trouxe a maior média de pontos e vitórias para a equipe?
-* **Fator Casa:** Em qual estádio o time possui sua maior "fortaleza" (taxa de vitórias)?
-* **Comparativo de Tabela:** Como o time se saiu contra o "Top 3" (melhores do ano) e contra o "Bottom 4" (zona de rebaixamento)?
-</details>
-
----
-
-## 📸 Telas do Dashboard
-
-### 1. Dashboard de Análises Gerais (Visão do Campeonato)
-![Dashboard Geral](docs/assets/analise-geral.png)
-
-### 2. Dashboard de Análise Tática dos Times (Visão Específica)
-![Dashboard de Times](docs/assets/analise-times.png)
-
----
-*Este repositório faz parte do portfólio de Visualização de Dados de **Ariel Shlomoh**.*
+👉 **[Acesse o Site Completo do Projeto](https://nandeslima.github.io/analise-campeonato-brasileiro/)**

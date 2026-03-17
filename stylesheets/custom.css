@@ -1,0 +1,45 @@
+:root {
+  --md-primary-fg-color: #00f2ff;
+  --md-primary-fg-color--light: #7000ff;
+  --md-primary-fg-color--dark: #00b8d4;
+  --md-accent-fg-color: #00f2ff;
+}
+
+/* Efeito Neon nos Títulos */
+h1, h2 {
+  text-shadow: 0 0 10px rgba(0, 242, 255, 0.3);
+  letter-spacing: -0.5px;
+}
+
+/* Customização dos Cards Admonition (Abstract/Note/etc) */
+.md-typeset .admonition.abstract {
+  border-left-color: #00f2ff;
+  background-color: rgba(0, 242, 255, 0.05);
+}
+
+.md-typeset .admonition.abstract > .admonition-title {
+  background-color: rgba(0, 242, 255, 0.1);
+}
+
+/* Botões e Badges com estilo Neon */
+.md-typeset .headerlink {
+  color: #00f2ff;
+}
+
+/* Estilo para tabelas */
+.md-typeset table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.md-typeset thead th {
+  background-color: #1a1a1a;
+  color: #00f2ff;
+}
+
+/* Efeito de Vidro (Glassmorphism) na barra lateral em modo escuro */
+[data-md-color-scheme="slate"] .md-sidebar {
+  background-color: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(10px);
+}

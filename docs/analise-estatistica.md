@@ -1,29 +1,34 @@
 # 📊 Análise Estatística & EDA (Exploratory Data Analysis)
 
-Nesta etapa, utilizamos Python para extrair insights que dashboards convencionais muitas vezes não conseguem evidenciar de forma nativa. O foco é entender os padrões de comportamento do futebol brasileiro ao longo das décadas.
+Nesta etapa, elevamos a análise para o nível de **Ciência de Dados**, utilizando Python para testar hipóteses e identificar padrões comportamentais no futebol brasileiro (2003-2021).
 
-## ⚽ Evolução da Média de Gols (2003 - 2021)
+## 🏠 Hipótese 1: O Declínio do "Fator Casa"
+Historicamente, jogar em casa é uma vantagem massiva. Mas essa vantagem é constante ou está diminuindo com a modernização do esporte (melhores gramados, viagens mais rápidas, VAR)?
 
-Utilizamos o Python para calcular a média de gols marcados por partida em cada temporada. O gráfico abaixo revela a evolução da "competitividade" ou "postura defensiva" dos times ao longo de quase duas décadas.
+![Tendência Home Advantage](assets/home_advantage_trend.png)
 
-![Evolução de Gols](assets/evolucao-gols.png)
+### 🧐 Insights da Hipótese:
+- **Resistência Histórica:** A média de vitórias em casa gira em torno de **49%**.
+- **Volatilidade:** Notamos quedas bruscas em anos específicos, sugerindo que o equilíbrio técnico do campeonato flutua, mas a "mística" do mando ainda é o fator individual mais forte na conquista de pontos.
 
-### 🧠 Lógica de Análise (Insight Técnico)
-O script [`eda_brasileirao.py`](https://github.com/NandesLima/analise-campeonato-brasileiro/blob/master/eda_brasileirao.py) realiza um agrupamento temporal (`groupby('ano')`) e extrai as médias móveis para suavizar flutuações sazonais, destacando tendências reais de performance ofensiva.
+## 🥅 Hipótese 2: O "Limiar da Vitória" (Goal Density)
+Quantos gols um mandante precisa fazer para garantir estatisticamente os 3 pontos?
 
-## 🏠 O Fator "Mando de Campo"
-Quantificamos o peso real de jogar em casa. 
+![Densidade de Gols](assets/goal_density_analysis.png)
+
+### 🧐 Insights da Hipótese:
+- **A Barreira dos 2 Gols:** A curva verde (vitória) atinge seu ápice quando o mandante marca **2 ou mais gols**. 
+- **Risco Estatístico:** Marcar apenas 1 gol em casa coloca o mandante em uma zona de "alta densidade de empates/derrotas", mostrando que a eficiência ofensiva é mais determinante que a retranca defensiva para garantir o resultado em casa.
+
+## 🚀 Ranking de Resiliência (Top 10 Visitantes)
+Identificamos os clubes que melhor performam sob pressão (fora de casa). Esta análise é vital para entender quem são os verdadeiros "donos" do campeonato, independentemente do estádio.
 
 ```python
-vitorias_mandante = (df['vencedor'] == df['mandante']).mean()
-print(f"Taxa de Vitória do Mandante: {vitorias_mandante:.2%}")
+# Média de pontos conquistados como visitante (Aproveitamento)
+visitante_pts = df.groupby('visitante')['pontos_visitante'].mean().sort_values(ascending=False)
 ```
 
-- **Análise Correlacional:** Através do EDA, identificamos que o mando de campo representa uma vantagem estatística de ~15% na probabilidade de vitória, um insight crucial para modelos preditivos.
-
-## 🔝 Performance dos Clubes
-Ranking de aproveitamento histórico baseado em pontos reais calculados, permitindo uma visão de longevidade e consistência de cada equipe na elite do futebol nacional.
-
 ---
-*A análise exploratória serve como bússola para a criação de dashboards mais inteligentes no Power BI, focando no que realmente importa.*
+*Esta análise transforma números frios em inteligência competitiva, provando que o tratamento de dados com Python permite enxergar o que o olho humano ignora.*
+
 

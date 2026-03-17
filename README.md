@@ -8,6 +8,14 @@
 
 <br>
 
+## 🚀 Acesso Rápido às Análises Sênior
+Para facilitar a navegação, aqui estão os atalhos diretos para os resultados deste projeto:
+
+- [**📈 Relatório de Engenharia de Dados**](docs/engenharia-dados.md) — *Limpeza, normalização e cálculo de pontos via Pandas.*
+- [**📊 Análise Estatística & EDA**](docs/analise-estatistica.md) — *Exploração de dados, tendências de gols e performance de times.*
+
+---
+
 > ⚠️ **UPGRADE DE STACK (Refatoração):** Este projeto original em Power BI foi refatorado para demonstrar a transição de um workflow manual para um **Pipeline Híbrido de Dados**. O Power BI agora serve como camada de visualização histórica, enquanto toda a inteligência de tratamento e análise estatística foi migrada para **Python & Pandas**.
 
 ---

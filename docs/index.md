@@ -1,62 +1,55 @@
-# ⚽ Dashboard Esportivo: Campeonato Brasileiro
+# ⚽ Brasileirão Analytics: Da Engenharia à Ciência de Dados
 
-!!! abstract "Objetivo"
-    Desenvolvimento de Dashboards interativos e modelagem de dados no Power BI para analisar o desempenho de clubes, formações táticas e estatísticas gerais do Campeonato Brasileiro (Série A) no período de **2003 a 2021**.
+!!! quote "A Regra de Ouro"
+    "Os dados não mentem, mas sozinhos eles não contam a história completa." — **Ariel Shlomoh**
 
----
-
-## 🎯 Visão Geral do Projeto
-
-Este projeto de Data Visualization foi dividido em duas frentes de negócio:
-
-=== "🏙️ Visão Macro (Consultoria)"
-    Uma visão geral e geográfica dos maiores pontuadores do campeonato ao longo de quase duas décadas. Foco em tendências regionais e dominância histórica.
-
-=== "📉 Visão Micro (Tática)"
-    Detalhamento granular do desempenho de times específicos, focando em:
-    - Eficiência de treinadores.
-    - Sucesso de formações táticas (ex: 4-4-2 vs 4-3-3).
-    - Performance por estádio (Fator Casa).
+Este projeto representa uma jornada completa de **Data Analytics**, saindo de um legado de planilhas para um pipeline moderno de engenharia de dados em Python, culminando em visualizações de alta performance e análises estatísticas avançadas.
 
 ---
 
-## 📸 Demonstração
+## 🚀 O Diferencial deste Projeto
 
-### 1. Análises Gerais (Visão do Campeonato)
+Diferente de dashboards convencionais, aqui tratamos o futebol como um ecossistema de dados complexos. Refatoramos toda a infraestrutura para garantir escalabilidade e precisão.
+
+### 🛡️ Engenharia de Dados (Python)
+Utilizamos Python e Pandas para criar um pipeline de limpeza robusto, processando mais de **7.600 partidas**. 
+- **Normalização Automática:** Tratamento de nomes de clubes e técnicos.
+- **Feature Engineering:** Cálculo dinâmico de pontos e fator de mando de campo direto no script.
+
+### 📊 Dashboard Interativo (Power BI)
+Uma experiência visual intuitiva para gestores esportivos e analistas de desempenho.
+
 ![Dashboard Geral](assets/analise-geral.png)
-
-### 2. Análise Tática dos Times
 ![Dashboard de Times](assets/analise-times.png)
 
 ---
 
-## 🛠️ Stack Técnica e Modelagem
+## 🧪 Ciência de Dados & Teste de Hipóteses
 
-*   **Ferramenta de BI:** Power BI
-*   **ETL:** Power Query (M Language)
-*   **Banco de Dados:** Histórico oficial (Série A) 2003-2021.
-*   **Arquitetura:** Star Schema (Fato-Dimensão).
+Não apenas mostramos o que aconteceu, mas **por que aconteceu**. Usamos análise exploratória avançada (EDA) para validar mitos do futebol:
 
-### Modelagem de Dados
-Para garantir performance analítica, a tabela original foi normalizada para o padrão Star Schema:
+1.  **Declínio do Home Advantage:** O peso da casa ainda é absoluto? (Regressão Linear).
+2.  **O Teto de Gols:** Quantos gols garantem uma vitória estatística? (Distribuição de Densidade).
+3.  **Eficiência Tática:** A formação influencia diretamente no aproveitamento de pontos? (Correlação).
+
+---
+
+## 🛠️ Stack Tecnológica
+
+| Camada | Tecnologia |
+| :--- | :--- |
+| **Linguagem Base** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) |
+| **Manipulação** | ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white) |
+| **Visualização BI** | ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat&logo=powerbi&logoColor=black) |
+| **Estilo do Site** | ![MkDocs](https://img.shields.io/badge/MkDocs-Material-526CFE?style=flat&logo=materialformkdocs&logoColor=white) |
+
+---
+
+## 📈 Modelagem de Dados (Star Schema)
+
+Para garantir que o Dashboard responda em milissegundos, implementamos uma arquitetura de dados otimizada:
 
 ![Modelagem de Dados](assets/modelagem-dados.png)
 
 ---
-
-## ❓ Perguntas Analíticas Respondidas
-
-???+ question "Quais os segredos táticos do Brasileirão?"
-    - **Formação:** Qual esquema tático converte mais pontos?
-    - **Liderança:** Qual técnico possui a melhor média histórica por clube?
-    - **Geografia:** Quais estados dominam o topo da tabela histórico?
-
----
-
-## 🚀 Como Explorar
-1.  Faça o download do arquivo [campeonato-brasileiro.pbix](campeonato-brasileiro.pbix).
-2.  Abra no Power BI Desktop.
-3.  Utilize os filtros laterais para navegar entre as temporadas.
-
----
-*Este repositório faz parte do portfólio de Visualização de Dados de **Ariel Shlomoh**.*
+*Este repositório é um laboratório vivo de técnicas de BI e Data Science aplicadas ao esporte.*
